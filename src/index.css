@@ -155,6 +155,10 @@ body {
 
 @keyframes buttonFadeIn {
   0% {
+    opacity: 0.01;
+    transform: translateY(20px) scale(0.8) rotateY(45deg);
+  }
+  1% {
     opacity: 0;
     transform: translateY(20px) scale(0.8) rotateY(45deg);
   }
@@ -288,6 +292,10 @@ body {
 
 @keyframes cardEntrance {
   0% {
+    opacity: 0.01;
+    transform: translateY(40px) scale(0.9) rotateX(10deg);
+  }
+  1% {
     opacity: 0;
     transform: translateY(40px) scale(0.9) rotateX(10deg);
   }
@@ -303,6 +311,10 @@ body {
 
 @keyframes imageEntrance {
   0% {
+    opacity: 0.01;
+    transform: scale(0.8) rotateY(20deg);
+  }
+  1% {
     opacity: 0;
     transform: scale(0.8) rotateY(20deg);
   }
@@ -318,6 +330,10 @@ body {
 
 @keyframes textSlideUp {
   0% {
+    opacity: 0.01;
+    transform: translateY(20px);
+  }
+  1% {
     opacity: 0;
     transform: translateY(20px);
   }
