@@ -80,7 +80,7 @@ The project is configured for deployment to kavalikas.com. Simply build and depl
 Edit `src/components/LandingPage.tsx` to update:
 
 - Name and title
-- Profile image (`src/assets/profile.png`)
+- Profile image (`src/assets/profile.webp`)
 - Social media links
 
 ### Styling
