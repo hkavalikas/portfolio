@@ -6,14 +6,21 @@ export default defineConfig({
   base: '/',
   build: {
     minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+      },
+    },
     rollupOptions: {
       output: {
         manualChunks: {
           'react-vendor': ['react', 'react-dom'],
-          icons: ['simple-icons/icons'],
         },
       },
     },
+    target: 'es2015',
+    sourcemap: false,
   },
   server: {
     port: 3000,
