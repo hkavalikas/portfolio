@@ -1,36 +1,24 @@
-# Static assets - cache for 1 year
-/assets/*
-  Cache-Control: public, max-age=31536000, immutable
-
-# Images - cache for 1 year
-*.png
-  Cache-Control: public, max-age=31536000, immutable
-
-*.jpg
-  Cache-Control: public, max-age=31536000, immutable
-
-*.jpeg
-  Cache-Control: public, max-age=31536000, immutable
-
-*.webp
-  Cache-Control: public, max-age=31536000, immutable
-
-*.svg
-  Cache-Control: public, max-age=31536000, immutable
-
-# JavaScript and CSS - cache for 1 year with hashing
-*.js
+/*
   Cache-Control: public, max-age=31536000, immutable
   X-Content-Type-Options: nosniff
 
-*.css
-  Cache-Control: public, max-age=31536000, immutable
-  X-Content-Type-Options: nosniff
-
-# HTML files - cache for 1 hour
 /*.html
-  Cache-Control: public, max-age=3600
-
-# Root HTML - no cache
-/
   Cache-Control: public, max-age=0, must-revalidate
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+
+/*.js
+  Cache-Control: public, max-age=31536000, immutable
+  Content-Type: application/javascript; charset=utf-8
+
+/*.css
+  Cache-Control: public, max-age=31536000, immutable
+  Content-Type: text/css; charset=utf-8
+
+/*.webp
+  Cache-Control: public, max-age=31536000, immutable
+  Content-Type: image/webp
+
+/*.svg
+  Cache-Control: public, max-age=31536000, immutable
+  Content-Type: image/svg+xml

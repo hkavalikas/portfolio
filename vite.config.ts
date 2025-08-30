@@ -38,11 +38,11 @@ export default defineConfig({
       output: {
         manualChunks: (id) => {
           if (id.includes('node_modules')) {
-            if (id.includes('react') || id.includes('react-dom')) {
-              return 'react-vendor'
+            if (id.includes('react')) {
+              return 'react'
             }
-            if (id.includes('tslib') || id.includes('scheduler')) {
-              return 'react-vendor'
+            if (id.includes('react-dom')) {
+              return 'react-dom'
             }
             return 'vendor'
           }
@@ -54,9 +54,9 @@ export default defineConfig({
     },
     target: 'es2020',
     sourcemap: false,
-    cssCodeSplit: true,
-    assetsInlineLimit: 4096,
-    chunkSizeWarningLimit: 500,
+    cssCodeSplit: false,
+    assetsInlineLimit: 10000,
+    chunkSizeWarningLimit: 200,
   },
   server: {
     port: 3000,
