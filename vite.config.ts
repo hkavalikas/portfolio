@@ -3,6 +3,13 @@ import react from '@vitejs/plugin-react'
 import { visualizer } from 'rollup-plugin-visualizer'
 
 export default defineConfig({
+  resolve: {
+    alias: {
+      'react': 'preact/compat',
+      'react-dom': 'preact/compat',
+      'react/jsx-runtime': 'preact/jsx-runtime'
+    }
+  },
   plugins: [
     react(),
     visualizer({
