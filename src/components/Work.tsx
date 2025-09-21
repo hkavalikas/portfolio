@@ -61,7 +61,8 @@ const Work = () => {
               <h3>Software Engineer In Test</h3>
               <p className="company">R3</p>
               <p className="description">
-                Quality assurance and test automation for blockchain and distributed ledger technology.
+                Quality assurance and test automation for blockchain and distributed ledger
+                technology.
               </p>
               <div className="tech-tags">
                 <span>Java</span>
@@ -82,6 +83,21 @@ const Work = () => {
                 <span>Java</span>
                 <span>Selenium</span>
                 <span>AWS</span>
+              </div>
+            </div>
+          </div>
+          <div className="work-item">
+            <div className="work-year">2019</div>
+            <div className="work-details">
+              <h3>Associate QA Engineer</h3>
+              <p className="company">ASOS.com</p>
+              <p className="description">
+                Quality assurance and testing for ASOS e-commerce platform and mobile applications.
+              </p>
+              <div className="tech-tags">
+                <span>Java</span>
+                <span>Selenium</span>
+                <span>Mobile Testing</span>
               </div>
             </div>
           </div>

@@ -6,24 +6,30 @@ const Contact = () => {
           <div className="contact-main">
             <h2>Let's Connect</h2>
             <p>
-              Always interested in new opportunities, collaborations, and conversations about
-              backend systems and cloud architecture.
+              Always open to discussing and learning more about innovative backend solutions, cloud
+              architecture patterns, or just chatting about the latest in tech.
             </p>
-            <a href="mailto:harry.kavalikas@hotmail.com" className="email-link">
-              harry.kavalikas@hotmail.com →
-            </a>
           </div>
-          <div className="contact-sidebar">
-            <h3>ELSEWHERE</h3>
-            <div className="contact-links">
-              <a href="https://github.com/hkavalikas" className="contact-link">
-                <span className="link-title">GitHub</span>
-                <span className="link-handle">@hkavalikas</span>
-              </a>
-              <a href="https://www.linkedin.com/in/charalampos-kavalikas/" className="contact-link">
-                <span className="link-title">LinkedIn</span>
-                <span className="link-handle">charalampos-kavalikas</span>
-              </a>
+          <div className="contact-sections">
+            <div className="contact-section-item">
+              <h3>CONTACT DETAILS</h3>
+              <div className="contact-links">
+                <a href="mailto:hello@kavalikas.com" className="contact-link">
+                  <span className="link-title">Email</span>
+                  <span className="link-handle">hello@kavalikas.com</span>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/charalampos-kavalikas/"
+                  className="contact-link"
+                >
+                  <span className="link-title">LinkedIn</span>
+                  <span className="link-handle">charalampos-kavalikas</span>
+                </a>
+                <a href="https://github.com/hkavalikas" className="contact-link">
+                  <span className="link-title">GitHub</span>
+                  <span className="link-handle">@hkavalikas</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>

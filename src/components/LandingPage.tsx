@@ -3,14 +3,14 @@ import Hero from './Hero'
 import Work from './Work'
 import Contact from './Contact'
 
+const sections = [
+  { id: 'hero', label: 'Home' },
+  { id: 'work', label: 'Work' },
+  { id: 'contact', label: 'Contact' },
+]
+
 const LandingPage = () => {
   const [activeSection, setActiveSection] = useState(0)
-
-  const sections = [
-    { id: 'hero', label: 'Home' },
-    { id: 'work', label: 'Work' },
-    { id: 'contact', label: 'Contact' }
-  ]
 
   const scrollToSection = (index: number) => {
     const element = document.getElementById(sections[index].id)
@@ -37,7 +37,10 @@ const LandingPage = () => {
           const offsetTop = element.offsetTop
           const offsetBottom = offsetTop + element.offsetHeight
 
-          if (scrollPosition + windowHeight / 2 >= offsetTop && scrollPosition + windowHeight / 2 < offsetBottom) {
+          if (
+            scrollPosition + windowHeight / 2 >= offsetTop &&
+            scrollPosition + windowHeight / 2 < offsetBottom
+          ) {
             setActiveSection(index)
           }
         }

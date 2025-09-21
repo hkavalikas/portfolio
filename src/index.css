@@ -28,6 +28,15 @@ body {
   gap: 24px;
 }
 
+/* Hide navigation on smaller screens */
+@media (max-width: 1600px) {
+  .nav-indicators {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+  }
+}
+
 .nav-indicator {
   background: none;
   border: none;
@@ -152,7 +161,7 @@ body {
 .status-indicator {
   width: 8px;
   height: 8px;
-  background: #22c55e;
+  background: #c52222;
   border-radius: 50%;
   animation: pulse 2s infinite;
 }
@@ -162,8 +171,13 @@ body {
 }
 
 @keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.5; }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
 }
 
 .hero-sidebar {
@@ -172,13 +186,15 @@ body {
   gap: 40px;
 }
 
-.currently, .focus {
+.currently,
+.focus {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
-.currently h3, .focus h3 {
+.currently h3,
+.focus h3 {
   font-size: 11px;
   letter-spacing: 1px;
   color: #8a8a8a;
@@ -296,7 +312,7 @@ body {
 
 .contact-content {
   display: grid;
-  grid-template-columns: 1fr 300px;
+  grid-template-columns: 1fr auto;
   gap: 80px;
   margin-bottom: 40px;
 }
@@ -315,26 +331,19 @@ body {
   margin-bottom: 32px;
 }
 
-.email-link {
-  font-size: 16px;
-  color: #ffffff;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  transition: color 0.2s ease;
+.contact-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  min-width: 300px;
 }
 
-.email-link:hover {
-  color: #22c55e;
-}
-
-.contact-sidebar h3 {
+.contact-section-item h3 {
   font-size: 11px;
   letter-spacing: 1px;
   color: #8a8a8a;
   font-weight: 500;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 .contact-links {
@@ -384,29 +393,36 @@ body {
 }
 
 /* Responsive Design */
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .hero-container {
     grid-template-columns: 1fr;
     gap: 40px;
   }
 
+  .hero-content {
+    order: 1;
+  }
+
   .hero-sidebar {
-    order: -1;
+    order: 2;
   }
 
   .contact-content {
     grid-template-columns: 1fr;
     gap: 40px;
   }
+
+  .contact-sections {
+    min-width: auto;
+    gap: 32px;
+  }
 }
 
 @media (max-width: 768px) {
-  .hero-section, .work-section, .contact-section {
+  .hero-section,
+  .work-section,
+  .contact-section {
     padding: 40px 20px;
-  }
-
-  .nav-indicators {
-    display: none;
   }
 
   .work-item {

@@ -12,11 +12,11 @@ const Hero = () => {
           </h1>
           <div className="hero-description">
             <p>
-              Founding Software Engineer specializing in <strong>backend systems</strong>, <strong>Node.js</strong>, and <strong>AWS architecture</strong>. Building scalable solutions with a foundation in Computer Science.
+              Founding Software Engineer specializing in <strong>backend systems</strong>,{' '}
+              <strong>Node.js</strong>, and <strong>AWS architecture</strong>. Building scalable
+              solutions with a foundation in Computer Science (BSc, King’s College London).
             </p>
             <div className="status">
-              <span className="status-indicator"></span>
-              <span>Available for work</span>
               <span className="location">London, UK</span>
             </div>
           </div>
