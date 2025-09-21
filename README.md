@@ -1,94 +1,57 @@
-# Portfolio Site
+# Portfolio Website
 
-A modern, responsive portfolio website built with React and TypeScript, designed to showcase professional information with a clean, minimalist aesthetic.
+A modern, responsive portfolio website showcasing professional experience with a clean, dark theme design. Built with React and TypeScript featuring smooth navigation and mobile-responsive layouts.
 
 ## Features
 
-- Clean, modern design with gradient background and glass morphism effects
-- Responsive layout that works on all devices
-- Social media links with Simple Icons integration
-- Smooth animations and hover effects
-- Fast loading with Vite build system
-- Optimized for production deployment
+- **Dark theme design** with professional aesthetics
+- **Section-based navigation** with smooth scrolling
+- **Responsive layout** that works on all devices
+- **Work experience timeline** with tech stack highlights
+- **Contact integration** with social media links
+- **Mobile-optimized** with adaptive navigation
+- **PWA support** with web app manifest
+- **SEO optimized** with structured data and meta tags
 
 ## Technologies
 
-- React 19
-- TypeScript
-- Vite
-- Simple Icons
-- CSS3 with modern features (backdrop-filter, animations)
+- **Frontend**: React 19, TypeScript
+- **Build**: Vite with Preact compatibility layer
+- **Styling**: Modern CSS3 with grid layouts and animations
+- **Optimization**: Code splitting, tree shaking, terser minification
+- **SEO**: Open Graph, Twitter Cards, structured data schema
+- **Performance**: 31KB bundle size, aggressive caching headers
 
-## Getting Started
+## Project Structure
 
-### Prerequisites
+```
+src/
+├── components/
+│   ├── Hero.tsx         # Main hero section with introduction
+│   ├── Work.tsx         # Work experience timeline
+│   ├── Contact.tsx      # Contact information and links
+│   └── LandingPage.tsx  # Main component with navigation
+├── App.tsx              # Application entry point
+├── main.tsx             # React DOM mounting
+└── index.css            # Global styles and responsive design
 
-- Node.js (v16 or higher)
-- npm or yarn
-
-### Installation
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/hkavalikas/portfolio.git
-cd portfolio
+public/
+├── _headers             # Security and caching headers
+├── manifest.json        # PWA web app manifest
+├── robots.txt           # Search engine directives
+├── sitemap.xml          # SEO sitemap
+├── favicon.svg          # Site icon
+└── profile.webp         # Profile image for social sharing
 ```
 
-2. Install dependencies:
+## Architecture
 
-```bash
-npm install
-```
-
-3. Start the development server:
-
-```bash
-npm run dev
-```
-
-The site will be available at `http://localhost:5173/`
-
-### Building for Production
-
-To create a production build:
-
-```bash
-npm run build
-```
-
-The built files will be in the `dist` directory.
-
-## Deployment
-
-### Deploy to GitHub Pages
-
-```bash
-npm run deploy
-```
-
-This will build the project and push it to the `gh-pages` branch of your repository.
-
-### Deploy to Custom Domain
-
-The project is configured for deployment to kavalikas.com. Simply build and deploy the `dist` folder to your hosting provider.
-
-## Customization
-
-### Profile Information
-
-Edit `src/components/LandingPage.tsx` to update:
-
-- Name and title
-- Profile image (`src/assets/profile.webp`)
-- Social media links
-
-### Styling
-
-- All styles are in `src/index.css`
-- Background gradient colors
-- Glass morphism effects and animations
-- Social button styles and hover effects
+- **Component-based** React architecture with TypeScript
+- **Section-based navigation** with smooth scrolling and active state detection
+- **Responsive design** with mobile-first approach and adaptive layouts
+- **Performance-optimized** with code splitting and aggressive caching
+- **SEO-friendly** with structured data, Open Graph, and Twitter Cards
+- **PWA-ready** with web app manifest for installability
 
 ## License
 

@@ -1,89 +1,79 @@
-import { useEffect, useRef } from 'react'
-import profileImage from '../assets/profile.webp'
+import { useEffect, useState } from 'react'
+import Hero from './Hero'
+import Work from './Work'
+import Contact from './Contact'
+
+const sections = [
+  { id: 'hero', label: 'Home' },
+  { id: 'work', label: 'Work' },
+  { id: 'contact', label: 'Contact' },
+]
 
 const LandingPage = () => {
-  const containerRef = useRef<HTMLDivElement>(null)
-  const particlesRef = useRef<HTMLDivElement>(null)
-  
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      if (!particlesRef.current) return
-      
-      const x = (e.clientX / window.innerWidth - 0.5) * 40
-      const y = (e.clientY / window.innerHeight - 0.5) * 40
-      
-      particlesRef.current.style.transform = `translateX(${x}px) translateY(${y}px)`
+  const [activeSection, setActiveSection] = useState(0)
+
+  const scrollToSection = (index: number) => {
+    const element = document.getElementById(sections[index].id)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
     }
-    
-    window.addEventListener('mousemove', handleMouseMove)
-    return () => window.removeEventListener('mousemove', handleMouseMove)
+  }
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY
+      const windowHeight = window.innerHeight
+      const documentHeight = document.documentElement.scrollHeight
+
+      // If we're near the bottom of the page, select contact
+      if (scrollPosition + windowHeight >= documentHeight - 100) {
+        setActiveSection(2) // Contact section
+        return
+      }
+
+      sections.forEach((section, index) => {
+        const element = document.getElementById(section.id)
+        if (element) {
+          const offsetTop = element.offsetTop
+          const offsetBottom = offsetTop + element.offsetHeight
+
+          if (
+            scrollPosition + windowHeight / 2 >= offsetTop &&
+            scrollPosition + windowHeight / 2 < offsetBottom
+          ) {
+            setActiveSection(index)
+          }
+        }
+      })
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    handleScroll() // Call once to set initial state
+
+    return () => window.removeEventListener('scroll', handleScroll)
   }, [])
-  
-  const githubPath =
-    'M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z'
-  const linkedinPath =
-    'M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z'
-  const emailPath =
-    'M3 8L10.89 13.26C11.2187 13.4793 11.6049 13.5963 12 13.5963C12.3951 13.5963 12.7813 13.4793 13.11 13.26L21 8M5 19H19C19.5304 19 20.0391 18.7893 20.4142 18.4142C20.7893 18.0391 21 17.5304 21 17V7C21 6.46957 20.7893 5.96086 20.4142 5.58579C20.0391 5.21071 19.5304 5 19 5H5C4.46957 5 3.96086 5.21071 3.58579 5.58579C3.21071 5.96086 3 6.46957 3 7V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19Z'
 
   return (
-    <div className="landing-container" ref={containerRef}>
-      <div className="particles-layer" ref={particlesRef}></div>
-      <div className="background-overlay"></div>
-
-      <div className="profile-card">
-        <img src={profileImage} alt="Profile" className="profile-image" />
-
-        <h1 className="profile-name">Harry Kavalikas</h1>
-        <p className="profile-title">Software Engineer</p>
-
-        <div className="social-icons">
-          <a
-            href="https://www.linkedin.com/in/charalampos-kavalikas/"
-            className="social-icon"
-            aria-label="LinkedIn"
+    <div className="portfolio">
+      {/* Navigation */}
+      <nav className="nav-indicators">
+        {sections.map((section, index) => (
+          <button
+            key={section.id}
+            className={`nav-indicator ${activeSection === index ? 'active' : ''}`}
+            onClick={() => scrollToSection(index)}
+            aria-label={`Go to ${section.label} section`}
           >
-            <svg
-              role="img"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              width="20"
-              height="20"
-            >
-              <path d={linkedinPath} />
-            </svg>
-          </a>
-          <a href="https://github.com/hkavalikas" className="social-icon" aria-label="GitHub">
-            <svg
-              role="img"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              width="20"
-              height="20"
-            >
-              <path d={githubPath} />
-            </svg>
-          </a>
-          <a href="mailto:hello@kavalikas.com" className="social-icon" aria-label="Email">
-            <svg
-              role="img"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              width="20"
-              height="20"
-            >
-              <path d={emailPath} />
-            </svg>
-          </a>
-        </div>
-      </div>
+            <span className="nav-line"></span>
+            <span className="nav-label">{section.label}</span>
+          </button>
+        ))}
+      </nav>
+
+      {/* Components */}
+      <Hero />
+      <Work />
+      <Contact />
     </div>
   )
 }
