@@ -1,23 +1,24 @@
 # Portfolio Site
 
-A modern, responsive portfolio website built with React and TypeScript, designed to showcase professional information with a clean, minimalist aesthetic.
+A modern, responsive portfolio website showcasing professional experience with a clean, dark theme design. Built with React and TypeScript featuring smooth navigation and mobile-responsive layouts.
 
 ## Features
 
-- Clean, modern design with gradient background and glass morphism effects
-- Responsive layout that works on all devices
-- Social media links with Simple Icons integration
-- Smooth animations and hover effects
-- Fast loading with Vite build system
-- Optimized for production deployment
+- **Dark theme design** with professional aesthetics
+- **Section-based navigation** with smooth scrolling
+- **Responsive layout** that works on all devices
+- **Work experience timeline** with tech stack highlights
+- **Contact integration** with social media links
+- **Mobile-optimized** with adaptive navigation
+- **Fast loading** with Vite build system
 
 ## Technologies
 
-- React 19
-- TypeScript
-- Vite
-- Simple Icons
-- CSS3 with modern features (backdrop-filter, animations)
+- **Frontend**: React 19, TypeScript
+- **Build**: Vite with Preact compatibility layer
+- **Styling**: Modern CSS3 with grid layouts and animations
+- **Optimization**: Terser minification, code splitting, tree shaking
+- **Deployment**: GitHub Pages with custom domain support
 
 ## Getting Started
 
@@ -47,17 +48,34 @@ npm install
 npm run dev
 ```
 
-The site will be available at `http://localhost:5173/`
+The site will be available at `http://localhost:3000/`
 
-### Building for Production
-
-To create a production build:
+### Development Commands
 
 ```bash
-npm run build
+npm run dev      # Start development server
+npm run build    # Build for production
+npm run preview  # Preview production build
+npm run lint     # Run ESLint
+npm run format   # Format code with Prettier
 ```
 
-The built files will be in the `dist` directory.
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── Hero.tsx      # Main hero section with introduction
+│   ├── Work.tsx      # Work experience timeline
+│   ├── Contact.tsx   # Contact information and links
+│   └── LandingPage.tsx # Main component with navigation
+├── App.tsx           # Application entry point
+├── main.tsx         # React DOM mounting
+└── index.css        # Global styles and responsive design
+
+public/
+└── profile.webp     # Profile image for social sharing
+```
 
 ## Deployment
 
@@ -67,28 +85,42 @@ The built files will be in the `dist` directory.
 npm run deploy
 ```
 
-This will build the project and push it to the `gh-pages` branch of your repository.
+This will build the project and deploy it to GitHub Pages at your custom domain.
 
-### Deploy to Custom Domain
+### Custom Domain
 
-The project is configured for deployment to kavalikas.com. Simply build and deploy the `dist` folder to your hosting provider.
+The project is configured for deployment to kavalikas.com with proper CNAME setup.
 
 ## Customization
 
-### Profile Information
+### Personal Information
 
-Edit `src/components/LandingPage.tsx` to update:
+Update your details in the respective components:
 
-- Name and title
-- Profile image (`src/assets/profile.webp`)
-- Social media links
+- **Hero section**: `src/components/Hero.tsx`
+- **Work experience**: `src/components/Work.tsx`
+- **Contact details**: `src/components/Contact.tsx`
 
 ### Styling
 
-- All styles are in `src/index.css`
-- Background gradient colors
-- Glass morphism effects and animations
-- Social button styles and hover effects
+- **Global styles**: `src/index.css`
+- **Responsive breakpoints**: 1200px (tablet), 768px (mobile)
+- **Navigation**: Hidden on screens smaller than 1600px
+- **Color scheme**: Dark theme with green accents (#22c55e)
+
+### Social Media & Meta Tags
+
+- **Open Graph**: Update `index.html` meta tags
+- **Profile image**: Replace `public/profile.webp`
+- **Contact links**: Update URLs in `Contact.tsx`
+
+## Performance Optimizations
+
+- **Preact compatibility** layer for smaller bundle size
+- **Code splitting** by vendor and component chunks
+- **Tree shaking** to eliminate unused code
+- **Terser minification** with console removal
+- **Bundle analysis** with rollup-plugin-visualizer
 
 ## License
 
