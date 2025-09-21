@@ -4,7 +4,7 @@ const Work = () => {
       <div className="work-container">
         <div className="work-header">
           <h2>Selected Work</h2>
-          <span className="work-duration">2018 — 2025</span>
+          <span className="work-duration">2017 — 2025</span>
         </div>
         <div className="work-timeline">
           <div className="work-item">
@@ -13,7 +13,7 @@ const Work = () => {
               <h3>Founding Software Engineer</h3>
               <p className="company">Hyper SQ</p>
               <p className="description">
-                Responsible for backend solution of flagship product and infrastructure.
+                Responsible for building the backend solutions of the flagship product and its infrastructure from the ground up and providing technical direction.
               </p>
               <div className="tech-tags">
                 <span>TypeScript</span>
@@ -30,13 +30,13 @@ const Work = () => {
               <h3>Senior Software Engineer</h3>
               <p className="company">Mirada Medical</p>
               <p className="description">
-                Development of Interventional Radiology Solution and SaaS platform.
+                Development and maintenance of the Interventional Radiology Solution (Simplicit90Y™) and SaaS (DaaS) solutions.
               </p>
               <div className="tech-tags">
                 <span>Java 11</span>
                 <span>Spring Boot</span>
                 <span>AWS</span>
-                <span>AppStream</span>
+                <span>CloudFormation</span>
               </div>
             </div>
           </div>
@@ -46,12 +46,14 @@ const Work = () => {
               <h3>Software Engineer</h3>
               <p className="company">Babylon</p>
               <p className="description">
-                Full-stack development and quality engineering for healthcare technology platform.
+                Microservices and process automation solutions platform development, and support of internal clients.
               </p>
               <div className="tech-tags">
-                <span>Node.js</span>
-                <span>TypeScript</span>
+                <span>Java 11</span>
+                <span>Spring Boot</span>
                 <span>AWS</span>
+                <span>Kafka</span>
+                <span>Docker</span>
               </div>
             </div>
           </div>
@@ -61,13 +63,12 @@ const Work = () => {
               <h3>Software Engineer In Test</h3>
               <p className="company">R3</p>
               <p className="description">
-                Quality assurance and test automation for blockchain and distributed ledger
-                technology.
+                Maintain and evolve the in-house regression automation framework (CRAFT → CRAFT5), while developing functional test cases.
               </p>
               <div className="tech-tags">
                 <span>Java</span>
                 <span>Kotlin</span>
-                <span>Corda</span>
+                <span>Azure</span>
               </div>
             </div>
           </div>
@@ -77,12 +78,13 @@ const Work = () => {
               <h3>Quality Assurance Engineer</h3>
               <p className="company">Amazon</p>
               <p className="description">
-                Quality assurance and testing for Amazon's e-commerce platform and services.
+                Test planning, documentation, execution, and automation, cooperating with different teams and platforms, onboarding and extending testing frameworks.
               </p>
               <div className="tech-tags">
-                <span>Java</span>
-                <span>Selenium</span>
+                <span>TypeScript</span>
+                <span>Scala</span>
                 <span>AWS</span>
+                <span>Webdriver.io</span>
               </div>
             </div>
           </div>
@@ -92,12 +94,11 @@ const Work = () => {
               <h3>Associate QA Engineer</h3>
               <p className="company">ASOS.com</p>
               <p className="description">
-                Quality assurance and testing for ASOS e-commerce platform and mobile applications.
+                Test automation (E2E), regression testing, analytics and accessibility testing.
               </p>
               <div className="tech-tags">
-                <span>Java</span>
-                <span>Selenium</span>
-                <span>Mobile Testing</span>
+                <span>Swift</span>
+                <span>XCUITest</span>
               </div>
             </div>
           </div>

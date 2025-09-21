@@ -14,7 +14,7 @@ const Hero = () => {
             <p>
               Founding Software Engineer specializing in <strong>backend systems</strong>,{' '}
               <strong>Node.js</strong>, and <strong>AWS architecture</strong>. Building scalable
-              solutions with a foundation in Computer Science (BSc, King’s College London).
+              solutions with a foundation in Computer Science (BSc, King’s College London)
             </p>
             <div className="status">
               <span className="location">London, UK</span>
