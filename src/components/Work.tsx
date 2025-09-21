@@ -66,7 +66,7 @@ const Work = () => {
                 Maintain and evolve the in-house regression automation framework (CRAFT → CRAFT5), while developing functional test cases.
               </p>
               <div className="tech-tags">
-                <span>Java</span>
+                <span>Java 11</span>
                 <span>Kotlin</span>
                 <span>Azure</span>
               </div>
