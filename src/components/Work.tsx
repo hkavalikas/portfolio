@@ -30,7 +30,7 @@ const Work = () => {
               <h3>Senior Software Engineer</h3>
               <p className="company">Mirada Medical</p>
               <p className="description">
-                Development and maintenance of the Interventional Radiology Solution (Simplicit90Y™) and SaaS (DaaS) solutions.
+                Developed and maintained the Interventional Radiology Solution (Simplicit90Y™) and SaaS (DaaS) solutions.
               </p>
               <div className="tech-tags">
                 <span>Java 11</span>
@@ -63,7 +63,7 @@ const Work = () => {
               <h3>Software Engineer In Test</h3>
               <p className="company">R3</p>
               <p className="description">
-                Maintain and evolve the in-house regression automation framework (CRAFT → CRAFT5), while developing functional test cases.
+                Maintained and evolved the in-house regression automation framework (CRAFT → CRAFT5), while developing functional test cases.
               </p>
               <div className="tech-tags">
                 <span>Java 11</span>
@@ -78,7 +78,7 @@ const Work = () => {
               <h3>Quality Assurance Engineer</h3>
               <p className="company">Amazon</p>
               <p className="description">
-                Test planning, documentation, execution, and automation, cooperating with different teams and platforms, onboarding and extending testing frameworks.
+                Planned, documented, executed, and automated tests, cooperating with different teams and platforms while onboarding and extending testing frameworks.
               </p>
               <div className="tech-tags">
                 <span>TypeScript</span>
@@ -94,7 +94,7 @@ const Work = () => {
               <h3>Associate QA Engineer</h3>
               <p className="company">ASOS.com</p>
               <p className="description">
-                Test automation (E2E), regression testing, analytics and accessibility testing.
+                Automated end-to-end tests, performed regression testing, analytics and accessibility testing.
               </p>
               <div className="tech-tags">
                 <span>Swift</span>
