@@ -13,7 +13,7 @@ const Work = () => {
               <h3>Founding Software Engineer</h3>
               <p className="company">Hyper SQ</p>
               <p className="description">
-                Responsible for building the backend solutions of the flagship product and its infrastructure from the ground up and providing technical direction.
+                Leading the development of backend systems and infrastructure for the flagship product, establishing technical direction and architecture.
               </p>
               <div className="tech-tags">
                 <span>TypeScript</span>
@@ -46,7 +46,7 @@ const Work = () => {
               <h3>Software Engineer</h3>
               <p className="company">Babylon</p>
               <p className="description">
-                Microservices and process automation solutions platform development, and support of internal clients.
+                Developed microservices and process automation solutions to support internal client operations.
               </p>
               <div className="tech-tags">
                 <span>Java 11</span>
