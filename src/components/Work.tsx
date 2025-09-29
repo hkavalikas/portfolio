@@ -11,7 +11,7 @@ const Work = () => {
             <div className="work-year">2023</div>
             <div className="work-details">
               <h3>Founding Software Engineer</h3>
-              <p className="company">Hyper SQ</p>
+              <p className="company">Hyper</p>
               <p className="description">
                 Leading the development of backend systems and infrastructure for the flagship product, establishing technical direction and architecture.
               </p>
